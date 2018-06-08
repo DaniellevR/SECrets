@@ -1,0 +1,31 @@
+<header>
+    <% include ../partials/header %>
+</header>
+    
+<div class="container">    
+    <div class="jumbotron text-center">
+        <h1>Encrypt-R-us</h1>
+        <form action="/secret" method="POST">
+            <p>
+                <label>Naam:</label>
+                <br/>
+                <input type="text" name="name" required />
+            </p>
+            <p>
+                <label>Geheime tekst: (leeg laten voor decryption)</label>
+                <br/>
+                <textarea name="secretText"><%= data %></textarea>
+            </p>
+            <p>
+                <label>Wachtwoord:</label>
+                <br/>
+                <input type="password" name="password" required />
+            </p>
+            <input type="submit" value="Verstuur!" />
+        </form>
+    </div>
+</div>
+  
+<footer>
+    <% include ../partials/footer %>
+</footer>
